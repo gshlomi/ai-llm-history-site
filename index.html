@@ -1,52 +1,24 @@
-<!doctype html>
-<html lang="he" dir="rtl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>היסטוריית AI ו-LLM (2000–2025)</title>
-  <style>
-    :root { --bg:#0b1020; --card:#121a33; --text:#e8ecff; --muted:#aab5df; --accent:#7aa2ff; --accent2:#8ef0d0; --border:#253056; }
-    * { box-sizing:border-box } body { margin:0; font-family:Segoe UI,Arial,sans-serif; background:radial-gradient(circle at top,#172446,var(--bg) 45%); color:var(--text); line-height:1.6 }
-    .container{max-width:1080px;margin:0 auto;padding:24px} header{text-align:center;padding:34px 18px 22px}
-    h1{margin:0 0 8px;font-size:clamp(1.6rem,3.5vw,2.6rem)} .subtitle{color:var(--muted)}
-    .btn{color:#d8e4ff;text-decoration:none;border:1px solid var(--border);background:#101a36;padding:8px 14px;border-radius:10px;display:inline-block;margin:6px}
-    .timeline{position:relative;margin:18px 0 28px;padding-right:24px}.timeline:before{content:"";position:absolute;right:7px;top:0;bottom:0;width:3px;background:linear-gradient(var(--accent),var(--accent2));border-radius:8px;opacity:.7}
-    .event{position:relative;margin:16px 0;padding:14px 16px;background:linear-gradient(180deg,#172245,var(--card));border:1px solid var(--border);border-radius:14px}
-    .event:before{content:"";position:absolute;right:-23px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--accent2)}
-    .year{color:var(--accent2);font-weight:700}.event h3{margin:0 0 8px}.sources{margin-top:8px;font-size:.92rem}
-    .sources a{color:#b9d0ff} .muted{color:var(--muted)}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף הבית - חדשות ועדכונים</title>
 </head>
 <body>
-  <div class="container">
     <header>
-      <h1>היסטוריית AI ו-LLM מ־2000 ועד היום</h1>
-      <p class="subtitle">מעודכן עם קישורי הרחבה לכל נקודת ציר זמן</p>
-      <a class="btn" href="/science.html">🔬 המדע מאחורי AI</a>
-      <a class="btn" href="/ollama.html">🦙 Ollama</a>
-      <a class="btn" href="/openclaw.html">🦞 OpenClaw</a>
-      <a class="btn" href="/ai-engines-comparison.html">⚖️ השוואת מנועי AI</a>
+        <h1>ברוכים הבאים לחדשות ועדכונים!</h1>
     </header>
-
-    <section class="timeline">
-      <article class="event"><div class="year">2000–2006</div><h3>יסודות: תשתיות, דאטה ו-GPU</h3><p>שנים של בניית הבסיס שאפשר מאוחר יותר את קפיצת ה-deep learning.</p><div class="sources">לקריאה נוספת: <a href="https://www.nature.com/articles/nature14539" target="_blank">Nature: Deep Learning Review</a></div></article>
-      <article class="event"><div class="year">2006</div><h3>החזרה של Deep Learning</h3><p>Hinton ועמיתים מציגים שיטות pre-training לרשתות עמוקות.</p><div class="sources">לקריאה נוספת: <a href="https://www.science.org/doi/10.1126/science.1127647" target="_blank">Reducing the Dimensionality of Data with Neural Networks</a></div></article>
-      <article class="event"><div class="year">2009</div><h3>ImageNet</h3><p>מערך הנתונים שהאיץ את תחום הראייה הממוחשבת.</p><div class="sources">לקריאה נוספת: <a href="https://www.image-net.org/about.php" target="_blank">ImageNet Official</a></div></article>
-      <article class="event"><div class="year">2012</div><h3>AlexNet</h3><p>שיפור דרמטי בתחרות ImageNet והוכחת הכוח של CNN על GPU.</p><div class="sources">לקריאה נוספת: <a href="https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html" target="_blank">ImageNet Classification with Deep CNNs</a></div></article>
-      <article class="event"><div class="year">2014</div><h3>Seq2Seq ו-GAN</h3><p>קפיצות משמעותיות בתרגום וביצירת תוכן סינתטי.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/1406.1078" target="_blank">Seq2Seq</a> · <a href="https://arxiv.org/abs/1406.2661" target="_blank">GAN</a></div></article>
-      <article class="event"><div class="year">2016</div><h3>AlphaGo</h3><p>ניצחון היסטורי על לי סדול.</p><div class="sources">לקריאה נוספת: <a href="https://www.nature.com/articles/nature16961" target="_blank">Mastering the Game of Go</a></div></article>
-      <article class="event"><div class="year">2017</div><h3>Transformer</h3><p>Attention Is All You Need – הבסיס ל-LLM מודרניים.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need</a></div></article>
-      <article class="event"><div class="year">2018</div><h3>BERT</h3><p>הבנה הקשרית דו-כיוונית ששינתה את NLP.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/1810.04805" target="_blank">BERT Paper</a></div></article>
-      <article class="event"><div class="year">2019</div><h3>GPT-2</h3><p>יכולות יצירה חזקות ותחילת דיון עמוק על בטיחות והפצה.</p><div class="sources">לקריאה נוספת: <a href="https://openai.com/research/better-language-models" target="_blank">OpenAI GPT-2</a></div></article>
-      <article class="event"><div class="year">2020</div><h3>GPT-3</h3><p>מודל ענק שמאיץ את שוק ה-AI מבוסס API.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/2005.14165" target="_blank">Language Models are Few-Shot Learners</a></div></article>
-      <article class="event"><div class="year">2021</div><h3>Codex וכלי קוד</h3><p>AI הופך לכלי יומיומי למפתחים.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/2107.03374" target="_blank">Evaluating Large Language Models Trained on Code</a></div></article>
-      <article class="event"><div class="year">2022</div><h3>ChatGPT</h3><p>נקודת מפנה של אימוץ המוני.</p><div class="sources">לקריאה נוספת: <a href="https://openai.com/blog/chatgpt" target="_blank">ChatGPT Announcement</a></div></article>
-      <article class="event"><div class="year">2023</div><h3>Open-source + RAG</h3><p>מודלים פתוחים וארכיטקטורות שמחברות ידע ארגוני.</p><div class="sources">לקריאה נוספת: <a href="https://arxiv.org/abs/2005.11401" target="_blank">RAG (Lewis et al.)</a> · <a href="https://ai.meta.com/llama/" target="_blank">Llama</a></div></article>
-      <article class="event"><div class="year">2024</div><h3>Agents ורגולציה</h3><p>מערכות אוטונומיות יותר לצד התקדמות משמעותית ברגולציה.</p><div class="sources">לקריאה נוספת: <a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act Tracker</a></div></article>
-      <article class="event"><div class="year">2025</div><h3>LLM כתשתית ארגונית</h3><p>פוקוס על ROI, אמינות, פרטיות ובקרה.</p><div class="sources">לקריאה נוספת: <a href="https://www.gartner.com/en/articles/what-is-generative-ai" target="_blank">Gartner: Generative AI</a></div></article>
-    </section>
-
-    <p class="muted">הערה: אם תרצה, אוסיף גם קישורי YouTube/הרצאות לכל נקודה.</p>
-  </div>
+    <main>
+        <section>
+            <h2>חדשות AI</h2>
+            <p>כאן מופיעות החדשות והעדכונים האחרונות בתחום הבינה המלאכותית.</p>
+            <ul>
+                <li><strong>GPT-4</strong> הציג ביצועים מרשימים בניתוח נתונים והבנה שפתית.</li>
+                <li>חידושים בתחום המודלים הפתוחים זוכים לפרסום נרחב.</li>
+                <li>קהילת מדעני המידע משיקה יוזמות חדשות לשיפור יעילות מודלי השפה.</li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

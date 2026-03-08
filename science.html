@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>המדע מאחורי AI</title>
+  <style>
+    :root { --bg:#0b1020; --card:#121a33; --text:#e8ecff; --muted:#aab5df; --accent:#8ef0d0; --border:#253056; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI",Arial,sans-serif; background:radial-gradient(circle at top,#172446,var(--bg) 45%); color:var(--text); line-height:1.7; }
+    .container { max-width: 1000px; margin:0 auto; padding:24px; }
+    h1 { margin:8px 0 12px; font-size:clamp(1.5rem,3vw,2.3rem); }
+    .subtitle { color:var(--muted); margin-bottom:18px; }
+    .nav a { color:#d8e4ff; text-decoration:none; border:1px solid var(--border); background:#101a36; padding:8px 12px; border-radius:10px; margin-left:8px; display:inline-block; }
+    .card { background:linear-gradient(180deg,#172245,var(--card)); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:14px 0; }
+    h2 { margin:0 0 8px; color:var(--accent); font-size:1.2rem; }
+    ul { margin:8px 0 0; padding-right:18px; }
+    .muted { color:var(--muted); }
+    code { background:#0d1733; border:1px solid var(--border); border-radius:6px; padding:1px 6px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a href="/index.html">⬅ חזרה לציר הזמן</a>
+    </div>
+    <h1>המדע מאחורי AI ו‑LLM</h1>
+    <p class="subtitle">הסבר פרקטי ופשוט על העקרונות המרכזיים שמפעילים מודלים מודרניים.</p>
+
+    <section class="card">
+      <h2>1) מה זה בכלל מודל AI?</h2>
+      <p>מודל AI הוא פונקציה מתמטית שלומדת דפוסים מתוך נתונים. במקום לכתוב חוק ידני לכל מקרה, אנחנו נותנים למודל דוגמאות והוא מכוונן פרמטרים כך שיחזה נכון.</p>
+    </section>
+
+    <section class="card">
+      <h2>2) למידה מונחית (Supervised Learning)</h2>
+      <p>יש לנו קלט ופלט נכון. המודל מנבא, מחשבים שגיאה (<code>loss</code>), ואז מעדכנים משקלים עם גרדיאנט דסנט ו‑Backpropagation כדי לצמצם שגיאה לאורך זמן.</p>
+    </section>
+
+    <section class="card">
+      <h2>3) רשתות נוירונים בקצרה</h2>
+      <p>רשת מורכבת משכבות של נוירונים מלאכותיים. כל שכבה עושה טרנספורמציה לנתון, והשילוב של הרבה שכבות מאפשר ללמוד ייצוגים מורכבים.</p>
+      <ul>
+        <li><b>Weights</b> – פרמטרים שנלמדים</li>
+        <li><b>Activation</b> – אי-לינאריות שמאפשרת ביטוי מורכב</li>
+        <li><b>Loss</b> – מדד כמה המודל טועה</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4) למה Transformer כל כך חשוב?</h2>
+      <p>במקום לעבד טקסט רק לפי סדר קשיח, מנגנון <b>Attention</b> מאפשר לכל מילה "להסתכל" על מילים רלוונטיות אחרות במשפט. זה משפר הבנת הקשר ומאפשר אימון יעיל בסקייל עצום.</p>
+    </section>
+
+    <section class="card">
+      <h2>5) איך LLM מבין טקסט?</h2>
+      <ul>
+        <li>הטקסט מתפרק ל‑<b>Tokens</b></li>
+        <li>כל טוקן הופך לוקטור מספרי (<b>Embedding</b>)</li>
+        <li>שכבות Transformer מעבדות את הרצף</li>
+        <li>המודל חוזה את הטוקן הבא בהסתברות הגבוהה ביותר</li>
+      </ul>
+      <p class="muted">בפועל, "הבנה" היא חיזוי סטטיסטי מתוחכם מאוד על בסיס הקשר.</p>
+    </section>
+
+    <section class="card">
+      <h2>6) Fine-tuning, Instruction tuning ו-RLHF</h2>
+      <p>אחרי pre-training על כמויות טקסט עצומות, משפרים את המודל באמצעות:</p>
+      <ul>
+        <li><b>Fine-tuning</b> על דאטה ספציפי לתחום</li>
+        <li><b>Instruction tuning</b> לשיפור מענה להוראות</li>
+        <li><b>RLHF</b> ליישור התנהגות לפי העדפות אנושיות</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>7) למה יש הזיות (Hallucinations)?</h2>
+      <p>כי המודל ממוטב לייצר טקסט "סביר" ולא לאמת אמת עובדתית בכל רגע. הוא יכול להישמע בטוח גם כשהמידע שגוי.</p>
+      <ul>
+        <li>פתרון נפוץ: <b>RAG</b> (שליפה ממקורות אמינים לפני תשובה)</li>
+        <li>בדיקות עובדתיות וכללי בטיחות</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>8) מולטימודל ו-Agents</h2>
+      <p>מודלים מודרניים עובדים עם טקסט, תמונה, אודיו ולעיתים וידאו. Agent מוסיף שכבת תכנון וביצוע פעולות (כלים, קבצים, API) מעבר ליצירת טקסט בלבד.</p>
+    </section>
+
+    <section class="card">
+      <h2>9) מגבלות ואתגרים מדעיים</h2>
+      <ul>
+        <li>צריכת חישוב ואנרגיה גבוהה</li>
+        <li>הטיות בנתונים</li>
+        <li>פרטיות וזכויות יוצרים</li>
+        <li>הסבריות ואמינות בעולם אמיתי</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>10) לאן המדע הולך?</h2>
+      <p>כיוון מרכזי הוא שילוב בין מודלים גדולים, זיכרון ארוך טווח, חיבור לידע עדכני, יכולות reasoning טובות יותר ומנגנוני בטיחות חזקים כבר ברמת הארכיטקטורה.</p>
+    </section>
+
+    <section class="card">
+      <h2>מקורות והעמקה</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/1706.03762" target="_blank">Attention Is All You Need (Transformer)</a></li>
+        <li><a href="https://arxiv.org/abs/1810.04805" target="_blank">BERT</a></li>
+        <li><a href="https://arxiv.org/abs/2005.14165" target="_blank">GPT-3</a></li>
+        <li><a href="https://arxiv.org/abs/2005.11401" target="_blank">RAG</a></li>
+        <li><a href="https://arxiv.org/abs/2203.02155" target="_blank">Chain-of-Thought Prompting</a></li>
+        <li><a href="https://openai.com/research/learning-from-human-preferences" target="_blank">RLHF (OpenAI)</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

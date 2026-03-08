@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>השוואה בין מנועי AI נפוצים</title>
+  <style>
+    body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#0b1020;color:#e8ecff;line-height:1.7}
+    .c{max-width:1100px;margin:auto;padding:24px}.card{background:#121a33;border:1px solid #253056;border-radius:12px;padding:14px 16px;margin:12px 0}
+    a{color:#aecdff}.btn{display:inline-block;padding:8px 12px;border:1px solid #253056;border-radius:10px;text-decoration:none;background:#101a36}
+    h1,h2{margin:0 0 8px}.muted{color:#aab5df}
+    table{width:100%;border-collapse:collapse;margin-top:8px} th,td{border:1px solid #2a3765;padding:10px;vertical-align:top} th{background:#18244a}
+  </style>
+</head>
+<body>
+  <div class="c">
+    <a class="btn" href="/index.html">⬅ חזרה לדף הראשי</a>
+    <h1 style="margin-top:12px;">השוואה בין מנועי AI נפוצים בשוק</h1>
+    <p class="muted">השוואה ברמת שימוש מעשית (לא benchmark אבסולוטי).</p>
+
+    <section class="card">
+      <h2>טבלת השוואה מהירה</h2>
+      <table>
+        <thead>
+          <tr><th>מנוע</th><th>חוזקות</th><th>מגבלות</th><th>מתאים במיוחד ל...</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>OpenAI (GPT)</td><td>איכות כללית גבוהה, ecosystem עשיר, מולטימודל</td><td>עלות API, תלות בענן</td><td>מוצרים מסחריים כלליים</td></tr>
+          <tr><td>Anthropic (Claude)</td><td>כתיבה ארוכה טובה, קונטקסט גדול, בטיחות</td><td>זמינות/מחיר לפי חבילה</td><td>ניתוח מסמכים ותהליכים ארוכים</td></tr>
+          <tr><td>Google (Gemini)</td><td>מולטימודל חזק, אינטגרציה עם Google ecosystem</td><td>שונות בין גרסאות/זמינות אזורית</td><td>שילוב ויזואלי + סביבת Google</td></tr>
+          <tr><td>Meta (Llama)</td><td>Open weights, שליטה וגמישות, on-prem</td><td>דורש תפעול/אופטימיזציה</td><td>ארגונים עם פרטיות ותשתית פנימית</td></tr>
+          <tr><td>Mistral</td><td>יעילות, ביצועים טובים לגדלים קטנים-בינוניים</td><td>אקו-סיסטם קטן יותר</td><td>פרויקטים מהירים וחסכוניים</td></tr>
+          <tr><td>Qwen (Alibaba)</td><td>יחס עלות/ביצועים טוב, דגמים פתוחים טובים</td><td>איכות משתנה בין גרסאות</td><td>הרצה מקומית ופתרונות היברידיים</td></tr>
+          <tr><td>Ollama (runtime)</td><td>לא מנוע מודל אלא שכבת הרצה מקומית נוחה</td><td>תלוי בדגם שתריץ ובחומרה</td><td>פיתוח מקומי ופרטיות</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>איך לבחור נכון?</h2>
+      <ul>
+        <li><b>פרטיות קודם?</b> שקול Llama/Qwen מקומי דרך Ollama.</li>
+        <li><b>איכות כללית מקסימלית?</b> בדוק GPT/Claude/Gemini לפי use-case.</li>
+        <li><b>עלות נמוכה בסקייל?</b> בדוק תמהיל היברידי: מקומי + ענן למשימות מורכבות.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>מקורות להעמקה</h2>
+      <ul>
+        <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI Docs</a></li>
+        <li><a href="https://docs.anthropic.com" target="_blank">Anthropic Docs</a></li>
+        <li><a href="https://ai.google.dev" target="_blank">Google AI for Developers</a></li>
+        <li><a href="https://ai.meta.com/llama/" target="_blank">Llama</a></li>
+        <li><a href="https://mistral.ai" target="_blank">Mistral</a></li>
+        <li><a href="https://ollama.com" target="_blank">Ollama</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
